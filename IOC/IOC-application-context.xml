@@ -1,0 +1,10 @@
+<beans>
+	<bean id="sort" class="objects.QSort">
+		<property name="name" value="QSort" />
+	</bean>
+
+<!-- 	<bean id="sort" class="objects.BubbleSort">
+		<property name="name" value="BubbleSort" />
+	</bean>
+	-->
+</beans>

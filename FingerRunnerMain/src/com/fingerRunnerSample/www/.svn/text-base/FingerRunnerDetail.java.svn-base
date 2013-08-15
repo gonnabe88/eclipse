@@ -1,0 +1,67 @@
+package com.fingerRunnerSample.www;
+
+import android.content.Context;
+import android.graphics.Canvas;
+import android.util.AttributeSet;
+import android.view.KeyEvent;
+
+public class FingerRunnerDetail extends GameEngine {
+	// 핸드폰에 출력되는 게임 이름 설정
+	public static final String NAME = "Finger Runner";
+
+	private static final long UPDATE_DELAY = 50;
+	private Context mContext;
+
+	/**
+	 * 생성자
+	 */
+	public FingerRunnerDetail(Context context) {
+		super(context);
+		mContext = context;
+		super.setUpdatePeriod(UPDATE_DELAY);
+	}
+
+	public FingerRunnerDetail(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		mContext = context;
+		super.setUpdatePeriod(UPDATE_DELAY);
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		return true;
+	}
+
+	/**
+	 * onDraw
+	 */
+	@Override
+	protected void onDraw(Canvas canvas) {
+		super.dispatchDraw(canvas);
+	}
+
+
+	@Override
+	protected void updateSprites() {
+	}
+
+
+	@Override
+	protected long getScore() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	protected void init() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected boolean gameOver() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

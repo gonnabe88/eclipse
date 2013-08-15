@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee                http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+  <!-- Servlets -->
+  
+  <servlet>
+        <servlet-name>SubscriptionServlet</servlet-name>
+        <servlet-class>org.dalpha.app.SubscriptionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SubscriptionServlet</servlet-name>
+        <url-pattern>/_ah/xmpp/subscription/subscribe/</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>PresenceServlet</servlet-name>
+        <servlet-class>org.dalpha.app.PresenceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PresenceServlet</servlet-name>
+        <url-pattern>/_ah/xmpp/presence/available/</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>MessageServlet</servlet-name>
+        <servlet-class>org.dalpha.app.MessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MessageServlet</servlet-name>
+        <url-pattern>/_ah/xmpp/message/chat/</url-pattern>
+    </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>org.dalpha.app.server.GreetingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/xmpp_test/greet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>Xmpp_test.html</welcome-file>
+  </welcome-file-list>
+ 
+  
+  <servlet>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+    <init-param>
+      <param-name>services</param-name>
+      <param-value/>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <url-pattern>/_ah/spi/*</url-pattern>
+  </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.fingerRunnerSample.www"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <!-- 배경 -->
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <!-- 설명 -->
+
+        <TextView
+            android:id="@+id/explain"
+            android:layout_width="200dip"
+            android:layout_height="150dip"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dip"
+            android:layout_marginTop="20dip"
+            android:gravity="center" />
+
+        <!-- on your mark image -->
+
+        <ImageView
+            android:id="@+id/mark"
+            android:layout_width="100dip"
+            android:layout_height="58dip"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dip"
+            android:layout_marginTop="150dip" />
+
+        <!-- on your mark 설명 -->
+
+        <TextView
+            android:id="@+id/mark_explain"
+            android:layout_width="130dip"
+            android:layout_height="60dip"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="left"
+            android:layout_marginLeft="150dip"
+            android:layout_marginTop="150dip"
+            android:gravity="left" />
+
+        <!-- 이름 입력 -->
+
+        <EditText
+            android:id="@+id/inputAddr"
+            android:layout_width="150dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:layout_marginTop="230dip"
+            android:hint="Input name"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="130dip"
+            android:layout_height="60dip"
+            android:layout_marginLeft="170dip"
+            android:layout_marginTop="230dip" />
+
+        <!-- 기네스북 -->
+
+        <ImageView
+            android:id="@+id/book"
+            android:layout_width="100dip"
+            android:layout_height="135dip"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dip"
+            android:layout_marginTop="300dip" />
+
+        <!-- 책 설명 -->
+
+        <TextView
+            android:id="@+id/book_explain"
+            android:layout_width="200dip"
+            android:layout_height="300dip"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="left"
+            android:layout_marginLeft="120dip"
+            android:layout_marginTop="385dip"
+            android:gravity="left" />
+        
+        <!-- 상단 ad@m -->
+		<net.daum.mobilead.MobileAdView
+			android:id="@+id/adview" android:visibility="invisible"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true" />
+		
+        <!-- cauly -->
+        <com.cauly.android.ad.AdView
+            android:id="@+id/ad"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:adtype="cpc"
+            app:age="all"
+            app:allowcall="yes"
+            app:appcode="w8czbvwC84"
+            app:effect="half"
+            app:gender="all"
+            app:gps="off"
+            app:reloadInterval="30"  />
+    </RelativeLayout>
+
+</LinearLayout>
